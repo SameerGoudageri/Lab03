@@ -6,16 +6,30 @@ it's written, so there is no benefit to writing full sentences or extra explanat
 
 **Q1.** In one phrase, what does `detect_fluid_levels()` compute?
 
+I calculate the fluid level in each of the three bottles.
+
 **Q2.** Which OpenCV function did you use in Step 1 (`threshold`) to binarise the image?
+
+I used cv2.threshold with inverted binary thresholding.
 
 **Q3.** What `kernel_size` did you use for the Step 2 (`close_gaps`) morphological closing?
 
+I used a kernel size of 5.
+
 **Q4.** What `canny_low` / `canny_high` values did you use for Step 3 (`detect_edges`)?
+
+I used Canny thresholds of 50 and 150.
 
 **Q5.** In one phrase, what does the Step 4 (`mask_roi`) region-of-interest mask remove from the
 edge image?
 
+The ROI mask removes edges outside the bottle neck region.
+
 **Q6.** Which OpenCV function does Step 5 (`find_lines`) use to find line segments?
+
+I used cv2.HoughLinesP.
 
 **Q7.** In Step 6 (`select_horizontal_lines`), how is a line's slope calculated from its endpoints
 `(x1, y1, x2, y2)`?
+
+I calculated the slope as (y2 - y1) / (x2 - x1).
